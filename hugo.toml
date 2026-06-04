@@ -1,34 +1,28 @@
 baseURL = "https://kuoted.vercel.app/"
-locale = "en-us"
+theme = "hugo-bearblog"
 title = "Kuoted"
-theme = "PaperMod"
+author = "Daniel Kuo"
+languageCode = "en-US"
 enableRobotsTXT = true
+
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[permalinks]
+  blog = "/:slug/"
+  tags = "/blog/:slug"
 
 [params]
   description = "Notes and quotes"
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  defaultTheme = "auto"
+  favicon = ""
+  enablePostNavigator = true
+  dateFormat = "2006-01-02"
 
-  [params.homeInfoParams]
-    Title = "Kuoted"
-    Content = "\"If we find ourselves with a desire that nothing in this world can satisfy, the most probable explanation is that we were made for another world.\" — C.S. Lewis"
-
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/danielhkuo"
-
-[menu]
-  [[menu.main]]
-    name = "Archive"
-    url = "/archives/"
-    weight = 10
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 20
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+[markup]
+  [markup.highlight]
+    style = "friendly"
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true
+  [markup.goldmark.renderer]
+    unsafe = true
