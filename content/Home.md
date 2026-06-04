@@ -1,6 +1,8 @@
 ---
+title: "Home"
+date: 2026-06-04
 share: true
-tags:
+tags: []
 ---
 ![](https://i.imgur.com/Gwb8h2a.jpeg)
 # Kuoted

@@ -1,0 +1,34 @@
+baseURL = "https://kuoted.vercel.app/"
+locale = "en-us"
+title = "Kuoted"
+theme = "PaperMod"
+enableRobotsTXT = true
+
+[params]
+  description = "Notes and quotes"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  defaultTheme = "auto"
+
+  [params.homeInfoParams]
+    Title = "Kuoted"
+    Content = "\"If we find ourselves with a desire that nothing in this world can satisfy, the most probable explanation is that we were made for another world.\" — C.S. Lewis"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/danielhkuo"
+
+[menu]
+  [[menu.main]]
+    name = "Archive"
+    url = "/archives/"
+    weight = 10
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
